@@ -1,0 +1,2 @@
+Desde la version 13 ya viene instalado el tema "Darcula" solo nos toca seleccionarlo para ello vas a:
+"FILE-->SETTING-->APPAERANCE-->THEME" una vez aqui seleccionas "Darcula" .Listo

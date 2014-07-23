@@ -1,0 +1,5 @@
+Ir a "tools" -> "plugin" --> "available" plugins buscar "Dark Metal Look and Feel" y lo instalas 
+para activar
+"tools" -> "options"--> "appearance"-->"Look and Feel" y escoges "Dark Metal" .Listo
+
+Nota: puedes descar mas temas desde aqui "http://netbeansthemes.com/"

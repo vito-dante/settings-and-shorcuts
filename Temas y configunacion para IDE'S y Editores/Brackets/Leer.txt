@@ -1,0 +1,4 @@
+Seguir los siguientes pasos:
+1- Ir al area de administracion de complementos , (se encuentra en la parte de derecha es la segunda)
+2- una vez en el area de complementos de vas a available e instalas el siguiente "Brackets Darker"
+3-ya instalado te pedira reiniciar, despues del reinicio te saldra una pestana "Darker" , le das click y escoges "Base 16 Monakai"

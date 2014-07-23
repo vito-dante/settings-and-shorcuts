@@ -1,0 +1,2 @@
+Colocar el archivo en la carpeta THEME
+En mi caso es \etc\themes\

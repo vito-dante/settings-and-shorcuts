@@ -1,0 +1,8 @@
+seguir el siguiente enlace si no quieres leer:
+https://www.youtube.com/watch?v=AQxAIAc2HnE
+
+Pasos a seguir:
+1- ir a la ruta donde esta la configuracion del idle, en windows es el siguiente "C:\Users\vito-dante\.idlerc\"
+2-copiar todos los archivos que estan en este repositorio (es la configuracion para el IDLE)
+3-Para aplicarlo, ahora te vas a pestana de "option" y en "configure IDLE" das click y te aparecera una "ventana de configuracion"
+4- te vas a la pestana de "highlighting" y das en "Custom Theme" aplicas y acepta . Listo  

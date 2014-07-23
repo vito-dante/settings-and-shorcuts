@@ -1,0 +1,9 @@
+Para empezar tienes que instalar "Package control"
+para eso ve a "https://sublime.wbond.net/installation"
+copia el contenido y pegalo en la terminal o el shell de sublime 
+ahora ya vas a poder instalar plugin online con el comando "install package"
+plugin recomendados
+1-Emmet
+2-python pep8
+3-html5
+4.-sublimeRope
