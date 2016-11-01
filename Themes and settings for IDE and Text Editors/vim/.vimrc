@@ -1327,3 +1327,5 @@ let g:go_highlight_build_constraints = 1
 "/*=============== cTags =============*/
 ""/*set tags=tags;*/
 
+""================= TODO LIST =================
+command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
