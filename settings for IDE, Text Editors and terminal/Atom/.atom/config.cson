@@ -1,0 +1,13 @@
+"*":
+  core:
+    disabledPackages: [
+      "font-viewer"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 24
+  "exception-reporting":
+    userId: "06868e68-a27b-9a07-45b5-9c268f811a63"
+  welcome:
+    showOnStartup: false

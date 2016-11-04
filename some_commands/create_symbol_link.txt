@@ -1,0 +1,2 @@
+Creation -> ln -s {/path/to/file-name} {link-name}
+Update -> ln -sfn {/path/to/file-name} {link-name}
