@@ -2,6 +2,6 @@
 ; modifications will be lost the next time any apm command is run.
 ;
 ; You should instead edit your .apmrc config located in ~/.atom/.apmrc
-cache = /home/dante/settings-and-shorcuts/settings for IDE, Text Editors and terminal/Atom/.atom/.apm
+cache = /home/dante/settings-and-shorcuts/IDE, text editors and Terminal/Atom/.atom/.apm
 ; Hide progress-bar to prevent npm from altering apm console output.
 progress = false

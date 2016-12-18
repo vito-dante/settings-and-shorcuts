@@ -131,7 +131,7 @@ alias qem='emacs -quick -nw'
 
 #================instalacion de GO ====
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/govito
+export GOPATH=$HOME/Days-Boring/govito
 
 alias tm="tmux new -s dante"
 alias tme="tmux attach -t dante"
@@ -145,4 +145,4 @@ alias docker='sudo docker'
 #
 # added by Anaconda2 4.2.0 installer
 export PATH="/home/dante/anaconda2/bin:$PATH"
-
+#export PATH="/home/dante/anaconda3/bin:$PATH"

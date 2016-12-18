@@ -1250,10 +1250,20 @@
     endif
 " }
 "
-"==========CONFIGURACION DEL MOUSE=============
+
+""<<<<<<<<<<<<<<<<<<<Personal Plugin>>>>>>>>>>>>>>>>>>
+Plugin 'fatih/vim-go' 
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'NLKNguyen/papercolor-theme'
+
+"<<<<<<<<<<<<<<<<<Personal Settings>>>>>>>>>>>>>>>>
+""==========MOUSE=============
 "set mouse=v
+""========= keyboard ===========
+map <F11>  :q! <cr>
+map <F12>  :w <cr>
 "
-""===========CODIFICACION DEL ARCHIVO==================
+""===========coding file==================
 set encoding=utf-8 
 
 "=========== nerd tree plugin ====================
@@ -1268,7 +1278,7 @@ set encoding=utf-8
 map <F9>  :!g++ %<cr>
 map <F10> :!./a.out<cr>     
 "
-""============= conifiguraciones de syntastic =============
+""============= syntastic =============
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -1281,10 +1291,10 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 nmap <F3> :SyntasticToggleMode<cr>
 nmap <F4> :SyntasticCheck<cr>
 
-"============== BREAk LINES ================
+"============== BREAK LINES ================
 ""asignar el textwidth 79 lines
 set tw=79
-"este comando es para quebrar la linea cuando pasa del tamano definido en el
+"this command is for break line 
 "tw
 ""gq+enter
 "nmap <F2> gq<cr>
@@ -1301,22 +1311,27 @@ autocmd InsertLeave * :set relativenumber
 ""=============== Fugitive Plugin=============== 
 nmap <F5> :Gstatus<cr>
 "
-""arreglar esta line del tema 
 "let g:airline_theme = 'solarized'
 "
 ""============== Disable spell ================
 "set nospell
 "
-""============== Change Theme  ================
-"colo Tomorrow-Night-Eighties
-"
+""============== Change Theme #1  ================
+""colo Tomorrow-Night-Eighties
+""============== Change Theme #2  ================
+set t_Co=256 
+set background=dark
+colorscheme PaperColor
+
 ""======== valor UTF-8 & introducir en valor ASCII characters ===
 " g+8 = get valor UTF-8
 " "Ctrl + v + [number of character in ASCII] // Ñ = 209 , ñ = 241
-" "
-"*================ vim go  =============*/
-Plugin 'fatih/vim-go'
+
 ""================= vim go  settings =========
+syntax enable  
+au FileType go nmap <leader>r <Plug>(go-run)
+filetype plugin on  
+let g:go_disable_autoinstall = 0
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -1324,8 +1339,13 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+map <F6>  :!go run %<cr>
+
 "/*=============== cTags =============*/
-""/*set tags=tags;*/
+set tags=tags;
 
 ""================= TODO LIST =================
-command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
+"command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
+
+"" ======= Display invisible characters==========
+""set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
