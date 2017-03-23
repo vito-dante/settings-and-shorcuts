@@ -631,7 +631,7 @@
         endif
 
         if isdirectory(expand("~/.vim/bundle/python-mode"))
-            let g:pymode_lint_checkers = ['pyflakes']
+            let g:pymode_lint_checkers = ['mypy']
             let g:pymode_trim_whitespaces = 0
             let g:pymode_options = 0
             let g:pymode_rope = 0
@@ -1255,10 +1255,13 @@
 Plugin 'fatih/vim-go' 
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'leafgarland/typescript-vim'
 
-"<<<<<<<<<<<<<<<<<Personal Settings>>>>>>>>>>>>>>>>
+""<<<<<<<<<<<<<<<<<Personal Settings>>>>>>>>>>>>>>>>
 ""==========MOUSE=============
 "set mouse=v
+
 ""========= keyboard ===========
 map <F11>  :q! <cr>
 map <F12>  :w <cr>
@@ -1288,11 +1291,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = '/usr/bin/python'
 let g:syntastic_html_tidy_exec = 'tidy5'
+
+let g:pymode_lint_checkers = ['mypy']
+let g:syntastic_python_checkers = ['mypy']
+
 nmap <F3> :SyntasticToggleMode<cr>
 nmap <F4> :SyntasticCheck<cr>
 
 "============== BREAK LINES ================
-""asignar el textwidth 79 lines
+"" set l textwidth 79 lines
 set tw=79
 "this command is for break line 
 "tw
@@ -1314,7 +1321,7 @@ nmap <F5> :Gstatus<cr>
 "let g:airline_theme = 'solarized'
 "
 ""============== Disable spell ================
-"set nospell
+set nospell
 "
 ""============== Change Theme #1  ================
 ""colo Tomorrow-Night-Eighties
@@ -1343,6 +1350,13 @@ map <F6>  :!go run %<cr>
 
 "/*=============== cTags =============*/
 set tags=tags;
+
+"===============  Typescript ============="
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd FileType typescript :set makeprg=tsc
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 ""================= TODO LIST =================
 "command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw

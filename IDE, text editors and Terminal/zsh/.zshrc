@@ -88,27 +88,9 @@ source $ZSH/oh-my-zsh.sh
 #disable name prompt user@host .... 
 prompt_context(){}
 
-
-#variables poject django
-# export my_hash='&2g(%(yf8@zgdecdeoq9no2sq(q*l%(sr5r)iz=j$xv37=xgmy'
-# export database='expertsystem_db'
-# export user_db='vito'
-# export password='vito'
-# export host='localhost'
-# export port='5432'
-
-# path of project 
-# export pry=$HOME/Desktop/virtuales/python3
-
 ### variables de java
  export JAVA_HOME=/opt/java/jdk1.8.0_73
  export PATH=$PATH:/opt/java/jdk1.8.0_73/bin
-# export my_hash='k9f+_4alniogo$ppaak6kcz1tj8rm+!z1t*mvy=-c%!@1pgzm$'
-# export database='expertsystem_db'
-# export user_db='vito'
-# export password='vito'
-# export host='localhost'
-# export port='5432'
 
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
@@ -132,6 +114,7 @@ alias qem='emacs -quick -nw'
 #================instalacion de GO ====
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/Days-Boring/govito
+export PATH=$PATH:$GOPATH/bin
 
 alias tm="tmux new -s dante"
 alias tme="tmux attach -t dante"
@@ -144,5 +127,16 @@ alias docker='sudo docker'
 #source ~/.nvm/nvm.sh
 #
 # added by Anaconda2 4.2.0 installer
-export PATH="/home/dante/anaconda2/bin:$PATH"
-#export PATH="/home/dante/anaconda3/bin:$PATH"
+#export PATH="/home/dante/anaconda2/bin:$PATH"
+export PATH="/home/dante/anaconda3/bin:$PATH"
+
+# ALIAS python 
+alias py='python3.6'
+
+# copy/paste
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# TODO
+alias td='todolist'
+
