@@ -96,15 +96,11 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
-#export NVM_DIR="/home/dante/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-#export correr=$HOME/Downloads/ARDrone_SDK_2_0_1/Examples/Linux/Build/Release
 # export PYTHONPATH="$PYTHONPATH:/usr/share/opencv/haarcascades/"
 # export PYTHONPATH="${PYTHONPATH}:/usr/share/opencv/haarcascades/
 #PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 #export PKG_CONFIG_PATH
-#export matlab=/usr/local/MATLAB/R2014b/bin/glnxa64
 alias em='emacs -nw'
 alias qem='emacs -quick -nw'
 # para asignar una variable al iniciar la session guardala en :
@@ -126,8 +122,7 @@ alias docker='sudo docker'
 #export NVM_DIR=~/.nvm
 #source ~/.nvm/nvm.sh
 #
-# added by Anaconda2 4.2.0 installer
-#export PATH="/home/dante/anaconda2/bin:$PATH"
+# added by Anaconda3 4.2.0 installer
 export PATH="/home/dante/anaconda3/bin:$PATH"
 
 # ALIAS python 
@@ -139,4 +134,3 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # TODO
 alias td='todolist'
-

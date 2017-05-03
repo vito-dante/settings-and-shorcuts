@@ -1250,7 +1250,7 @@
     endif
 " }
 "
-
+set rtp+=~/.vim/bundle/Vundle.vim
 ""<<<<<<<<<<<<<<<<<<<Personal Plugin>>>>>>>>>>>>>>>>>>
 Plugin 'fatih/vim-go' 
 Plugin 'ryanoasis/vim-devicons'
@@ -1345,6 +1345,7 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
 
 map <F6>  :!go run %<cr>
 
