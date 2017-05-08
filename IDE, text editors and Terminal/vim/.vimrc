@@ -631,7 +631,7 @@
         endif
 
         if isdirectory(expand("~/.vim/bundle/python-mode"))
-            let g:pymode_lint_checkers = ['mypy']
+            let g:pymode_lint_checkers = ['pyflakes']
             let g:pymode_trim_whitespaces = 0
             let g:pymode_options = 0
             let g:pymode_rope = 0
@@ -1256,7 +1256,6 @@ Plugin 'fatih/vim-go'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'leafgarland/typescript-vim'
 
 ""<<<<<<<<<<<<<<<<<Personal Settings>>>>>>>>>>>>>>>>
 ""==========MOUSE=============
