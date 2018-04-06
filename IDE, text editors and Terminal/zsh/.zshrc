@@ -89,8 +89,8 @@ source $ZSH/oh-my-zsh.sh
 prompt_context(){}
 
 ### variables de java
- export JAVA_HOME=/opt/java/jdk1.8.0_73
- export PATH=$PATH:/opt/java/jdk1.8.0_73/bin
+export JAVA_HOME=/home/dante/jdk-9.0.1
+export PATH=$PATH:/home/dante/jdk-9.0.1/bin
 
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
@@ -115,9 +115,7 @@ export PATH=$PATH:$GOPATH/bin
 alias tm="tmux new -s dante"
 alias tme="tmux attach -t dante"
 
-alias docker='sudo docker'
-#tmux
-#
+alias dk='sudo docker'
 #============ NVM ==============
 #export NVM_DIR=~/.nvm
 #source ~/.nvm/nvm.sh
@@ -125,15 +123,13 @@ alias docker='sudo docker'
 # added by Anaconda3 4.2.0 installer
 export PATH="/home/dante/anaconda3/bin:$PATH"
 
-# ALIAS python 
-alias py='python3.6'
-
 # copy/paste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # TODO
 alias td='todolist'
+alias l='colorls'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
