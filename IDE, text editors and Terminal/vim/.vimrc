@@ -1326,7 +1326,7 @@ set nospell
 ""colo Tomorrow-Night-Eighties
 ""============== Change Theme #2  ================
 set t_Co=256 
-set background=dark
+"set background=dark
 colorscheme PaperColor
 
 ""======== valor UTF-8 & introducir en valor ASCII characters ===
