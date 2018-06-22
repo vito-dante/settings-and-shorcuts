@@ -1251,6 +1251,7 @@
 " }
 "
 set rtp+=~/.vim/bundle/Vundle.vim
+
 ""<<<<<<<<<<<<<<<<<<<Personal Plugin>>>>>>>>>>>>>>>>>>
 Plugin 'fatih/vim-go' 
 Plugin 'ryanoasis/vim-devicons'
@@ -1259,27 +1260,15 @@ Plugin 'davidhalter/jedi-vim'
 
 ""<<<<<<<<<<<<<<<<<Personal Settings>>>>>>>>>>>>>>>>
 ""==========MOUSE=============
-"set mouse=v
+set mouse=v
 
 ""========= keyboard ===========
-map <F11>  :q! <cr>
+map <F8>  :q! <cr>
 map <F12>  :w <cr>
 "
 ""===========coding file==================
 set encoding=utf-8 
 
-"=========== nerd tree plugin ====================
-"let mapleader = ","
-""nmap <leader>ne :NERDTreeToggle<cr>
-"nmap <F2> :NERDTreeToggle<cr>
-"
-""========BACKGROUND THEME ==============
-"let g:solarized_termtrans =  0 
-"
-""=========== compile files =============
-map <F9>  :!g++ %<cr>
-map <F10> :!./a.out<cr>     
-"
 ""============= syntastic =============
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -1300,38 +1289,20 @@ nmap <F4> :SyntasticCheck<cr>
 "============== BREAK LINES ================
 "" set l textwidth 79 lines
 set tw=79
-"this command is for break line 
-"tw
-""gq+enter
-"nmap <F2> gq<cr>
-"nmap <F2> gqq
-"
-""========== set hash # in header vim settings ========
-"quita los parantesis para funcione (vim:set background=light et:)
-"
-":au FocusLost * :set number
-":au FocusGained * :set relativenumber
+
+"================ number line relative
 autocmd InsertEnter * :set nornu
 autocmd InsertLeave * :set relativenumber
 "
 ""=============== Fugitive Plugin=============== 
 nmap <F5> :Gstatus<cr>
-"
-"let g:airline_theme = 'solarized'
-"
+
 ""============== Disable spell ================
 set nospell
 "
-""============== Change Theme #1  ================
-""colo Tomorrow-Night-Eighties
-""============== Change Theme #2  ================
+""============== Change Theme ================
 set t_Co=256 
-"set background=dark
 colorscheme PaperColor
-
-""======== valor UTF-8 & introducir en valor ASCII characters ===
-" g+8 = get valor UTF-8
-" "Ctrl + v + [number of character in ASCII] // Ñ = 209 , ñ = 241
 
 ""================= vim go  settings =========
 syntax enable  
@@ -1357,9 +1328,6 @@ let g:typescript_compiler_options = ''
 autocmd FileType typescript :set makeprg=tsc
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-
-""================= TODO LIST =================
-"command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
 
 "" ======= Display invisible characters==========
 ""set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣

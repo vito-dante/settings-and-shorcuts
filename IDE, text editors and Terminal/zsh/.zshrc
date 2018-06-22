@@ -1,5 +1,8 @@
+#color terminal 256
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/dante/.oh-my-zsh
+export ZSH=/home/vito/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -9,11 +12,10 @@
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-#old theme
-#ZSH_THEME="agnoster"
-
 # Set name of the theme to load.
 ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="agnoster"
+
 
 #DEFAULT_USER= "whoami"
 RPROMPT='%*'
@@ -39,10 +41,6 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{black}%F{green}
  POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='black'
 #
 # # Dirs
- #POWERLEVEL9K_DIR_HOME_BACKGROUND='green'
- #POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
- #POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='green'
- #POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
  POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
  POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
  POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
@@ -50,9 +48,8 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{black}%F{green}
 #
 # # OS segment
  POWERLEVEL9K_OS_ICON_BACKGROUND='black'
- #POWERLEVEL9K_LINUX_ICON='%F{cyan}\uf300 %F{white}arch%F{cyan}linux%f'
  POWERLEVEL9K_LINUX_ICON=''
-#
+
 # # VCS icons
  POWERLEVEL9K_VCS_GIT_ICON=$''
  POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$''
@@ -61,42 +58,26 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{black}%F{green}
  POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d'
  POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
  POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
-#
-# # VCS colours
- #POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
- #POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
- #POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
- #POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
- #POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
- #POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
-#
-# # VCS CONFIG
+
+ # VCS CONFIG
  POWERLEVEL9K_SHOW_CHANGESET=false
-#
-# # Status
+
+ # Status
  POWERLEVEL9K_OK_ICON=$'\uf164'
  POWERLEVEL9K_FAIL_ICON=$'\uf165'
  POWERLEVEL9K_CARRIAGE_RETURN_ICON=$'\uf165'
-#
-# # Battery
- #POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
- #POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='yellow'
- #POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='green'
- #POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
-#
-# # Time
+
+ # Time
  POWERLEVEL9K_TIME_FORMAT="%F{black}\uf017 %D{%I:%M}%f"
- #POWERLEVEL9K_TIME_BACKGROUND='green'
-#
-# # Command auto-correction.
+
+ # Command auto-correction.
  ENABLE_CORRECTION="true"
-#
-# # Command execution time stamp shown in the history command output.
+
+ # Command execution time stamp shown in the history command output.
  HIST_STAMPS="mm/dd/yyyy"
 
  #Prompt elements
  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
- #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs time battery)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -143,9 +124,7 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{black}%F{green}
 plugins=(git)
 
 # User configuration
-
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -177,54 +156,58 @@ source $ZSH/oh-my-zsh.sh
 #disable name prompt user@host .... 
 prompt_context(){}
 
-### variables de java
-export JAVA_HOME=/home/dante/jdk-9.0.1
-export PATH=$PATH:/home/dante/jdk-9.0.1/bin
+# variables de java
+export JAVA_HOME=/opt/jre1.8.0_172
+export PATH=$PATH:/opt/jre1.8.0_172/bin
 
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
+#tmux
+alias tm="tmux new -s vito"
+alias tme="tmux attach -t vito"
 
-# export PYTHONPATH="$PYTHONPATH:/usr/share/opencv/haarcascades/"
-# export PYTHONPATH="${PYTHONPATH}:/usr/share/opencv/haarcascades/
-#PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-#export PKG_CONFIG_PATH
-alias em='emacs -nw'
-alias qem='emacs -quick -nw'
-# para asignar una variable al iniciar la session guardala en :
-# "/etc/enviroment" guardala sin el prefijo alias
-#  $HOME/.profile
-
-#================instalacion de GO ====
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/Days-Boring/govito
-export PATH=$PATH:$GOPATH/bin
-
-alias tm="tmux new -s dante"
-alias tme="tmux attach -t dante"
-
+#docker
 alias dk='sudo docker'
+
 #============ NVM ==============
 #export NVM_DIR=~/.nvm
 #source ~/.nvm/nvm.sh
-#
-# added by Anaconda3 4.2.0 installer
-export PATH="/home/dante/anaconda3/bin:$PATH"
+
+#============ GOPATH ==========
+export PATH=$PATH:/usr/local/go/bin
+
+# added by Anaconda
+ #export PATH="/home/vito/anaconda3/bin:$PATH"
 
 # copy/paste
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # TODO
-alias td='todolist'
-alias l='colorls'
+alias l="colorls"
+alias ll="colorls -lA --sd"
 
+#update
+alias update="sudo apt-get update" 
+alias upgrade="sudo apt-get upgrade"
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then source '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+#
+# zsh highlight command line
+source /home/vito/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#suggestion next command
+source /home/vito/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
+#transfer file
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
